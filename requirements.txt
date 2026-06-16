@@ -1,5 +1,4 @@
 fastapi
-uvicorn
+uvicorn[standard]
 anthropic
-playwright
 pydantic
