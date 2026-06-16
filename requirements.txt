@@ -1,2 +1,5 @@
-anthropic>=0.25.0
-playwright>=1.44.0
+fastapi
+uvicorn
+anthropic
+playwright
+pydantic
