@@ -1,0 +1,71 @@
+{
+  "profile": {
+    "full_name": "Your Full Name",
+    "email": "your@email.com",
+    "phone": "+91-9876543210",
+    "location": "Hyderabad, India",
+    "linkedin_url": "https://linkedin.com/in/yourprofile",
+    "github_url": "https://github.com/yourprofile",
+    "portfolio_url": "",
+    "resume_path": "./resume.pdf",
+    "degree": "B.Tech Computer Science",
+    "university": "Your University",
+    "graduation_year": "2024",
+    "gpa": "8.5/10",
+    "years_of_experience": "0",
+    "skills": ["Python", "SQL", "Machine Learning", "Pandas", "NumPy", "Scikit-learn", "TensorFlow", "Tableau", "Git"],
+    "top_project": "Built a sentiment analysis model on 50k tweets using BERT — 91% accuracy, deployed as a REST API",
+    "summary": "Motivated data science fresher with hands-on experience in ML model building, data analysis, and Python. Passionate about turning data into actionable insights."
+  },
+
+  "credentials": {
+    "linkedin": {
+      "email": "your_linkedin_email@gmail.com",
+      "password": "your_linkedin_password"
+    },
+    "indeed": {
+      "email": "your_indeed_email@gmail.com",
+      "password": "your_indeed_password"
+    }
+  },
+
+  "job_search": {
+    "roles": [
+      "Data Scientist",
+      "Data Scientist Intern",
+      "ML Engineer",
+      "Machine Learning Intern",
+      "Data Analyst",
+      "Data Analyst Intern",
+      "AI Engineer",
+      "Junior Data Scientist"
+    ],
+    "job_types": ["internship", "full-time", "fresher"],
+    "locations": [
+      "Remote",
+      "United States",
+      "United Kingdom",
+      "Germany",
+      "Netherlands",
+      "Singapore",
+      "Australia",
+      "Canada",
+      "India"
+    ],
+    "remote_preference": "remote_hybrid",
+    "experience_levels": ["entry", "internship"],
+    "blacklisted_companies": [],
+    "blacklisted_keywords": ["5+ years", "senior only", "10+ years", "lead required"]
+  },
+
+  "agent_settings": {
+    "max_applications_per_day": 20,
+    "max_applications_per_session": 5,
+    "delay_between_applications_seconds": [8, 15],
+    "delay_between_searches_seconds": [3, 7],
+    "headless": false,
+    "anthropic_api_key": "YOUR_ANTHROPIC_API_KEY_HERE",
+    "tracker_file": "./applications.csv",
+    "log_file": "./agent.log"
+  }
+}
