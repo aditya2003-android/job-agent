@@ -64,7 +64,7 @@
     "delay_between_applications_seconds": [8, 15],
     "delay_between_searches_seconds": [3, 7],
     "headless": false,
-    "anthropic_api_key": "YOUR_ANTHROPIC_API_KEY_HERE",
+    "anthropic_api_key": "placeholder",
     "tracker_file": "./applications.csv",
     "log_file": "./agent.log"
   }
