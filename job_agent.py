@@ -48,12 +48,15 @@ def setup_logging(log_file: str) -> logging.Logger:
 def load_config(path: str = "config.json") -> dict:
     with open(path, "r") as f:
         cfg = json.load(f)
+    import os
     key = cfg["agent_settings"].get("anthropic_api_key", "")
-    if not key or key == "YOUR_ANTHROPIC_API_KEY_HERE":
+    key = os.environ.get("ANTHROPIC_API_KEY", key)
+    if not key or key == "placeholder":
         raise ValueError(
-            "Set your Anthropic API key in config.json → agent_settings.anthropic_api_key\n"
+            "Set your Anthropic API key in config.json\n"
             "Get one at: https://console.anthropic.com"
         )
+    cfg["agent_settings"]["anthropic_api_key"] = key
     return cfg
 
 
