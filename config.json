@@ -6,26 +6,26 @@
     "location": "Visakhapatnam,AndhraPradesh, India",
     "linkedin_url": "https://www.linkedin.com/in/sriinu-animireddy-b01803275/",
     "github_url": "https://github.com/aditya2003-android",
-    "portfolio_url": "",
+    "portfolio_url": "aditya2003-android.github.io",
     "resume_path": "./resume.pdf",
-    "degree": "B.Tech Computer Science",
-    "university": "Your University",
-    "graduation_year": "2024",
-    "gpa": "8.5/10",
+    "degree": "B.Tech, Computer Science & Engineering",
+    "university": "Godavari Institute of Engineering & Technology",
+    "graduation_year": "2025",
+    "gpa": "7.67/10",
     "years_of_experience": "0",
-    "skills": ["Python", "SQL", "Machine Learning", "Pandas", "NumPy", "Scikit-learn", "TensorFlow", "Tableau", "Git"],
-    "top_project": "Built a sentiment analysis model on 50k tweets using BERT — 91% accuracy, deployed as a REST API",
+    "skills": ["Python", "SQL", "Machine Learning","Deep Learning", "Pandas", "NumPy", "Scikit-learn",  "Tableau", "Git"],
+    "top_project": "Presented SkinSmart, a CNN-based skin disease detection app (MobileNetV2, 91% accuracy), at an international Springer-indexed conference (CSEAi 2024)",
     "summary": "Motivated data science fresher with hands-on experience in ML model building, data analysis, and Python. Passionate about turning data into actionable insights."
   },
 
   "credentials": {
     "linkedin": {
-      "email": "your_linkedin_email@gmail.com",
-      "password": "your_linkedin_password"
+      "email": "srinuanimireddy77@gmail.com",
+      "password": "postbox@1"
     },
     "indeed": {
-      "email": "your_indeed_email@gmail.com",
-      "password": "your_indeed_password"
+      "email": "srinuanimireddy630@gmail.com",
+      "password": "Anim@2005"
     }
   },
 
@@ -43,14 +43,20 @@
     "job_types": ["internship", "full-time", "fresher"],
     "locations": [
       "Remote",
+      "India",
       "United States",
       "United Kingdom",
+      "Ireland",
+      "UAE",
+      "Denmark",
+      "Finland",
+      "Switzerland",
       "Germany",
       "Netherlands",
       "Singapore",
       "Australia",
       "Canada",
-      "India"
+
     ],
     "remote_preference": "remote_hybrid",
     "experience_levels": ["entry", "internship"],
