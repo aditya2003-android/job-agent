@@ -62,6 +62,16 @@ class LinkedInAgent:
         page.goto("https://www.linkedin.com/login", wait_until="domcontentloaded")
         _human_delay(1, 2)
 
+        # DEBUG: capture what page actually loaded before attempting to fill
+        try:
+            page.screenshot(path="debug_linkedin_page.png")
+            self.log.info(f"[LinkedIn] DEBUG — page title: {page.title()}")
+            self.log.info(f"[LinkedIn] DEBUG — page url: {page.url}")
+            body_snippet = page.inner_text("body")[:500].replace("\n", " ")
+            self.log.info(f"[LinkedIn] DEBUG — body text snippet: {body_snippet}")
+        except Exception as e:
+            self.log.info(f"[LinkedIn] DEBUG — screenshot/inspect failed: {e}")
+
         page.fill("#username", self.email)
         _human_delay(0.3, 0.7)
         page.fill("#password", self.password)
