@@ -1,15 +1,13 @@
 from fastapi import FastAPI
-import subprocess
+from bot import run_job_agent
 
 app = FastAPI()
 
-
 @app.get("/")
 def home():
-    return {"status": "running"}
-
+    return {"message": "Job Agent Running"}
 
 @app.get("/run")
-def run_agent():
-    subprocess.Popen(["python3", "job_agent.py"])
-    return {"status": "started"}
+async def run():
+    await run_job_agent()
+    return {"status": "Job agent executed successfully"}
