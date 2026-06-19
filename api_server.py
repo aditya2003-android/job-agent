@@ -8,23 +8,32 @@ def home():
     return {"message": "Server is running"}
 
 @app.post("/run-agent")
-async def run_agent():
-    async with async_playwright() as p:
-        browser = await p.chromium.launch(
-            headless=True,
-            args=[
-                "--no-sandbox",
-                "--disable-dev-shm-usage",
-                "--disable-gpu",
-                "--single-process"
-            ]
+async def run_agent(request: Request):
+
+    body = await request.json()
+
+    platform = body.get("platform", "all")
+    limit = body.get("limit", 20)
+    dry_run = body.get("dry_run", False)
+
+    jobs = scrape_jobs(
+        platform=platform,
+        limit=limit
+    )
+
+    results = []
+
+    for job in jobs:
+
+        result = apply_to_job(
+            job=job,
+            dry_run=dry_run
         )
 
-        page = await browser.new_page()
-        await page.goto("https://example.com")
+        results.append(result)
 
-        title = await page.title()
-
-        await browser.close()
-
-    return {"status": "success", "title": title}
+    return {
+        "status": "success",
+        "jobs_processed": len(results),
+        "results": results
+    }
