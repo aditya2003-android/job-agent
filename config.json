@@ -69,7 +69,7 @@
     "max_applications_per_session": 5,
     "delay_between_applications_seconds": [8, 15],
     "delay_between_searches_seconds": [3, 7],
-    "headless": true,
+    "headless": false,
     "anthropic_api_key": "sk-ant-api03-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",
     "tracker_file": "./applications.csv",
     "log_file": "./agent.log"
