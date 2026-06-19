@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from bot import run_job_agent
+from playwright.async_api import async_playwright
 
 app = FastAPI()
 
@@ -7,10 +7,24 @@ app = FastAPI()
 def home():
     return {"message": "Server is running"}
 
-@app.post("/run-agent")   # ✅ FIXED (match Railway request)
+@app.post("/run-agent")
 async def run_agent():
-    try:
-        await run_job_agent()
-        return {"status": "Bot ran successfully"}
-    except Exception as e:
-        return {"error": str(e)}
+    async with async_playwright() as p:
+        browser = await p.chromium.launch(
+            headless=True,
+            args=[
+                "--no-sandbox",
+                "--disable-dev-shm-usage",
+                "--disable-gpu",
+                "--single-process"
+            ]
+        )
+
+        page = await browser.new_page()
+        await page.goto("https://example.com")
+
+        title = await page.title()
+
+        await browser.close()
+
+    return {"status": "success", "title": title}
