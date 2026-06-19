@@ -1,14 +1,16 @@
 from fastapi import FastAPI
 from bot import run_job_agent
-import asyncio
 
 app = FastAPI()
 
 @app.get("/")
-async def root():
-    return {"message": "API is running"}
+def home():
+    return {"message": "Server is running"}
 
-@app.get("/run-bot")
-async def run_bot():
-    await run_job_agent()
-    return {"status": "Bot executed"}
+@app.post("/run-agent")   # ✅ FIXED (match Railway request)
+async def run_agent():
+    try:
+        await run_job_agent()
+        return {"status": "Bot ran successfully"}
+    except Exception as e:
+        return {"error": str(e)}
